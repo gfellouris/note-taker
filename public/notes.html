@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>Note Taker</title>
+</head>
+
+<body>
+    <div class="jumbotron">Note Taker</div>
+    <!-- Form control to enter a new note -->
+    <div class="card">
+        <div class="card-header">
+            <i class="fas fa-save text-primary"></i> Save a Note:
+        </div>
+        <div class="card-body">
+                <div class="form-group">
+                        <input type="text" class="form-control" id="noteTitle" placeholder="Note Title" >
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="noteText" placeholder="Enter Note Text" >
+                      </div>
+        </div>
+        <div class="card-footer">
+                <button id="#save-btn" type="button" class="btn btn-primary float-right">Save Note</button>
+        </div>
+    </div>
+    <br>
+    <!-- Secton to list all notes and option to delete -->
+    <div class="card">
+        <div class="card-header">
+            <i class="fas fa-clipboard-list text-primary"></i> My Notes:
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div>
+                        <span class="font-weight-bold">
+                                <i class="fas fa-sticky-note text-info"></i> Title of Note
+                        </span>
+                        <i class="fas fa-trash-alt float-right text-danger">
+                        </i>
+                    </div>
+                    <p>Note Text</p>
+                </li>
+            </ul>
+        </div>
+        <div class="card-footer">
+            <p>10 notes listed</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
