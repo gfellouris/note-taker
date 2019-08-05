@@ -2,6 +2,7 @@
 var connection = require("../db/connection");
 // create express server instance
 var app = require("../server");
+var path = require("path");
 
 // ============ Database TEST ============
 // testQuery();
@@ -14,12 +15,21 @@ var app = require("../server");
 // }
 
 // ============ Express App TEST ============
-app.get("/", function(req, resExpress) {
-    resExpress.send("Express server is working - TEST PASSED!");
+// app.get("/", function(req, resExpress) {
+//     resExpress.send("Express server is working - TEST PASSED!");
+// });
+
+// Basic route that sends the user first to the AJAX Page
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+
+app.get("/notes", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/notes.html"));
 });
 
 // ============ Return all notes  ============
-app.get("/api/notes", function(req, resExpress) {
+app.get("/api/allnotes", function(req, resExpress) {
   connection.query("SELECT * FROM notes", function(err, resSQL) {
     if (err) throw err;
     resExpress.json(resSQL);
