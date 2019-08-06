@@ -35,7 +35,13 @@ app.get("/api/allnotes", function(req, resExpress) {
     resExpress.json(resSQL);
   });
 });
-
+// ============ Return all notes  ============
+app.get("/api/countnotes", function(req, resExpress) {
+  connection.query("SELECT count(*) as numnotes FROM notes", function(err, resSQL) {
+    if (err) throw err;
+    resExpress.json(resSQL);
+  });
+});
 // ============ Add a new note ============
 app.post("/api/add", function(req, resExpress) {
   var newNote = req.body;
