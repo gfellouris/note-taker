@@ -1,0 +1,11 @@
+#content {
+    background-image: url("../images/notetaker_bg.jpg");
+    background-size: cover;
+    /* background-attachment: scroll; */
+    background-repeat: no-repeat;
+    margin: auto;
+    padding: 10px;
+    /* background-size: 100%; */
+    /* height: 100vh;  */
+    height: 100%;
+  }

@@ -3,11 +3,12 @@ var faNotes = '<i class="fas fa-sticky-note text-info"></i>';
 
 var liStartNoteTitle = '<li class="list-group-item"> ';
 liStartNoteTitle += '<span class="font-weight-bold">';
-liStartNoteTitle += '<i class="fas fa-sticky-note text-info"></i>';
+liStartNoteTitle += '<i class="far fa-sticky-note text-success"></i>';
 var liEndNoteTitle = "</span>";
 var liStartNoteBody = "<p>";
 var liEndNoteBody = "</p></li>";
 
+// This will run when the page is loaded and display all notes
 $.get("/api/allnotes", function(data) {
   console.log(data);
   if (data) {
@@ -18,14 +19,12 @@ $.get("/api/allnotes", function(data) {
         data[i].id +
         ' class="fas fa-trash-alt float-right text-danger"></i>';
       var noteTitle =
-        liStartNoteTitle + data[i].title + liEndNoteTitle + delItem;
+        liStartNoteTitle + " " + data[i].title + liEndNoteTitle + delItem;
       noteTitle += liStartNoteBody + data[i].body + liEndNoteBody;
       $("#notesInfo").append(noteTitle);
     }
   } else {
-    $("#noteInfo").text(
-      "The force is not strong with this one. Your character was not found."
-    );
+    $("#noteInfo").text("No notes found");
     $("#notesInfo").hide();
   }
 });

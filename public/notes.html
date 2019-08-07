@@ -21,53 +21,58 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- custom style sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Note Taker</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">Note Taker
-        </a>
-    </nav>
-    <br>
-    <!-- Form control to enter a new note -->
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-save text-primary"></i> Save a Note:
-            </div>
-            <div class="card-body">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="noteTitle" placeholder="Note Title">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="noteBody" placeholder="Enter Note Text">
-                </div>
-            </div>
-            <div class="card-footer">
-                <button id="save-btn" type="button" class="btn btn-primary float-right">Save Note</button>
-            </div>
-        </div>
+    
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Note Taker
+            </a>
+        </nav>
+        <div id="content">
         <br>
-        <!-- Secton to list all notes and option to delete -->
-
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-clipboard-list text-primary"></i> My Notes:
-            </div>
-            <div class="card-body">
-                <ul class="list-group">
-                    <div id="notesInfo">
+        <!-- Form control to enter a new note -->
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-save text-secondary"></i> Save a Note:
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="noteTitle" placeholder="Note Title">
                     </div>
-                </ul>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="noteBody" placeholder="Enter Note Text">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button id="save-btn" type="button" class="btn btn-primary float-right">Save Note</button>
+                </div>
             </div>
-            <div class="card-footer">
-                <p><span id="countnotes"></span> notes listed</p>
+            <br>
+            <!-- Secton to list all notes and option to delete -->
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-clipboard-list text-secondary"></i> My Notes:
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <div id="notesInfo">
+                        </div>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <p><span id="countnotes"></span> notes listed</p>
+                </div>
             </div>
         </div>
-    </div>
-
+    
     <script src="assets/javascript/app.js"></script>
+</div>
 </body>
 
 </html>
