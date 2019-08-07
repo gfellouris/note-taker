@@ -10,8 +10,8 @@ Node, Express, and MySQL powered note-taking application. The user will have the
 
 ## Technologies used and why
 <b>Built with</b>
-- mySQL - used in order to store and update inventory that would be dynamic and maintained even when the app is not running.
-- Node.js - used to process user input.
+- mySQL - used in order to create and delete notes that would be dynamic and maintained even when the app is not running.
+- Node.js - used to create api routes
 - Express.js - web instance
 - Bootstrap - responsive design
 - jQuery - dynamic content for adding and deleting notes
